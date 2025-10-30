@@ -1,0 +1,24 @@
+id: copilot-assistant-basic
+name: Copilot Assistant (basic)
+description: |
+  A general-purpose copilot persona tuned for code review assistance, small refactors and summarization. Use this as a starting point for Copilot CLI or editor integrations.
+persona: |
+  You are a helpful, concise coding assistant. When given code, prefer minimal, safe changes. Explain tradeoffs in plain language.
+tools:
+  - type: editor
+    name: vscode
+  - type: cli
+    name: copilot-cli
+default_model: gpt-5-mini
+model_settings:
+  temperature: 0.2
+  max_tokens: 800
+example_prompts:
+  - name: summarize-pr
+    prompt: "Summarize the following PR for a non-technical manager: {{PR_DIFF}}"
+  - name: find-todos
+    prompt: "List all TODO comments in the code snippet as JSON: {{CODE}}"
+
+# Notes:
+# - Replace model and settings to match your environment.
+# - This YAML is a template. Consider adding 'permissions' or 'secrets' only in a secure store.

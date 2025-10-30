@@ -1,0 +1,7 @@
+{
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "github.copilot.enable": true,
+    "github.copilot.inlineSuggest.enable": true,
+    "github.copilot.suggestionActions.enabled": true
+}
